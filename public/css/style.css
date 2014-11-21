@@ -1,0 +1,321 @@
+@charset "UTF-8";
+/*****************************************
+ *
+ * Stiiv 2014
+ * 
+ * @colors:
+ *  light blue : #A5C2E8;
+ *
+ *****************************************/
+*{ padding: 0; margin: 0; }
+
+ /* solve backward compatibility html5 tags issues */
+ article, aside, footer, header, main, nav, section
+ { display: block; }
+
+  /** prevent focus outline on chrome **/
+ input, select, textarea { outline: none; margin: 0 0 2px 2px; }
+
+ /* remove spacing between table th, td, tr */
+ table {
+    border-collapse: collapse;
+    border-spacing: 0;
+ }
+
+ body {
+     font-family: Helvetica, Arial, sans-serif;
+     min-width: 200px;
+     width: 100%;
+     height: 100%;
+ }
+
+ .clear { clear: both; }
+ .bold { font-weight: bold; }
+ .position-relative { position: relative; }
+ .close {
+    display: block;
+    cursor: pointer;
+    padding: .1% .3em;
+    margin: .1em .3em;
+    font-size: .8em;
+    position: absolute;
+    top: .1em;
+    right: 0;
+ }
+ .close:hover { background: #fff; }
+
+ div#wrapper {
+     min-width: 320px;
+     width: 95%;
+     max-width: 1024px;
+     margin: 0 auto;
+     -webkit-box-shadow: 2px 2px 8px #000000;
+     -moz-box-shadow: 2px 2px 8px #000000;
+     box-shadow: 2px 2px 8px #000000;
+ }
+
+ #header {
+     color: #647587;
+     background: #ccc;
+     padding: 2% 3%;
+ }
+  #header a {
+    display: inline-block;
+    text-decoration: none;
+    color: #647587;
+ }
+
+ #main-menu {
+     background: #647587;
+     padding: 1% 3%;
+ }
+
+ /* LOG IN FORM */
+
+ #main-menu > #login-form { color: #ccc; }
+ #main-menu > #login-form label {
+    display: inline-block;
+ }
+ #main-menu > #login-form input {
+    margin: .1em;
+ }
+ #main-menu > #login-form input[type="submit"] {
+    color: #fff;
+    background: #E6B26A;
+    width: 7em;
+ }
+  #main-menu > #login-form input[type="submit"]:hover {
+    background: #E3C7A1;
+ }
+
+#main-menu ul {
+    list-style: none;
+    position: relative;
+}
+#main-menu ul li {
+    float: left;
+    margin: .3em .5em;
+}
+#main-menu ul li > a {
+    text-decoration: none;
+    color: #ccc;
+}
+#main-menu ul li > a:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+/* USERMENU */
+#main-menu ul li#username-menu {
+    margin-right: 2%;
+}
+#main-menu ul li#username-menu a {
+    display: block;
+    width: 100%;
+    background: #3D4752;
+    padding: 6% 8%;
+    position: relative;
+    bottom: 0;
+    left: 1%;
+}
+#main-menu ul li#username-menu ul {
+    display: none;
+    position: absolute;
+    top: 2.4em;
+    width: 7em;
+    background: #3D4752;
+}
+#main-menu ul li#username-menu:hover ul {
+    display: block;
+}
+#main-menu ul li#username-menu ul li  {
+    
+}
+#main-menu ul li#username-menu ul li a {
+    padding: 0;
+    color: #ccc;
+    text-decoration: none;
+}
+#main-menu ul li#username-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+#main-menu input {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 10em;
+    height: 30px;
+    margin-left: 3%;
+    padding: .2em .5em;
+    border: 0 solid #fff;
+}
+input#search-btn {
+    width: 3em;
+    margin-left: -10px;
+    text-indent: -999px;
+    background: url('../images/search_icon.png') center #fff no-repeat;
+    background-size: 2em;
+}
+input#search-btn:hover {
+    background: url('../images/search_icon.png') center #E3C7A1 no-repeat;
+    background-size: 2em;
+}
+
+#content { background: #fff; }
+
+section { width: 100%; padding: 2%; }
+
+div.contacts {
+    /*border: 1px solid red;*/
+    width: 70%;
+    margin-left: 5%;
+}
+div.contacts table {
+    color: #647587;
+    margin: 10px 0;
+    border-top: .1em solid #000;
+    border-bottom: .1em solid #000;
+    min-width: 20%;
+    width: 70%;
+}
+table td:first-child { color: #647587; }
+
+div.contacts table tr:nth-child(even) { background: #fff; }
+div.contacts table tr:nth-child(odd) { background: #E3E5E6; }
+div.contacts table a.view-contact {
+    color: #647587;
+}
+div.contacts table a.view-contact:hover {
+    color: #000;
+}
+#view-contact-pic {
+    width: 80%;
+    border: .1em solid #647587;
+    margin: 2%;
+}
+
+table.main-table td, th {
+    padding: .2em;
+}
+
+form#insert-new-contact {
+    width: 70%;
+    margin-left: 5%;
+}
+form#insert-new-contact fieldset {
+    border: .1em solid #E6B26A;
+    padding: 5%;
+}
+form#insert-new-contact legend {
+    font-size: 1.5em;
+    color: #E6B26A;
+}
+
+form#insert-new-contact input, textarea, select {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    padding: .2em .5em;
+    border: .1em solid #E6B26A;
+    background: #E3C7A1;
+}
+form#insert-new-contact textarea {
+    min-width: 100%;
+}
+form#insert-new-contact input[type="submit"] {
+    color: #fff;
+    background: #E6B26A;
+}
+form#insert-new-contact input[type="submit"]:hover {
+    background: #E3C7A1;
+}
+
+form#edit-contact input[type="text"], form#edit-contact textarea, form#edit-contact select {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: .2em .5em;
+    border: .1em solid #ccc;
+    background: #fff;
+}
+
+/* Error or success message  */
+
+ul.validate-error {
+    list-style-type: none;
+    list-style-position: inside;
+    margin-left: -10%;
+}
+ul.validate-error li { font-weight: bold; }
+
+
+ul.validate-error ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-left: 10%;
+}
+
+/* page message for success or failure */
+
+div.message {
+    width: 63.5%;
+    margin-left: 5%;
+    padding: 3%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.edit-message {
+    position: relative;
+    left: -5.2%;
+}
+.success {
+    color: #008000;
+    border: .2em solid #006400;
+    background: #BAF2B8;
+}
+.failure {
+    color: #821111;
+    border: .2em solid #821111;
+    background: #E3C7A1;;
+}
+
+div.pagination {
+    width: 70%;
+    padding-left: 5%;
+    text-align: center;
+}
+div.pagination span {
+    display: inline-block;
+    padding: 0 1%;
+    margin: 0 .05em;
+    color: #647587;
+    border: .1em solid #647587;
+}
+div.pagination a, .back-link {
+    display: inline-block;
+    padding: 0 1%;
+    margin: 0 .05em;
+    color: #647587;
+    background: #ccc;
+    border: .1em solid #647587;
+    text-decoration: none;
+}
+div.pagination a:hover, .back-link:hover {
+    display: inline-block;
+    padding: 0 1%;
+    color: #647587;
+    background: #ccc;
+    border: .1em solid #ccc;
+    text-decoration: none;
+}
+
+ #footer {
+     text-align: center;
+     color: #ccc;
+     background: #647587;
+     padding: 1% 3%;
+ }
