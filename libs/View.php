@@ -43,7 +43,8 @@ class View {
      * @return string
      */
     public function var_check(&$var) {
-        return isset($var) ? $var : '';
+        return isset($var) ? htmlspecialchars($var,ENT_QUOTES,'UTF-8') : '';
+        //I put htmlspecialchars into the var_check to avoid the XSS injection.
     }
     
 }
